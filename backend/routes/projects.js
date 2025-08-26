@@ -1,6 +1,6 @@
 import express from 'express';
 
-import Project from '../models/projects';
+import Project from '../models/projects.js';
 
 const router = express.Router();
 
@@ -13,3 +13,5 @@ router.get('/', async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 })
+
+export default router;
