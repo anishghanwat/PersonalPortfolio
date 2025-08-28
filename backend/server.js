@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 
 import projectRoutes from "./routes/projects.js";
 import experienceRoutes from "./routes/experience.js";
-// import contactRoutes from "./routes/contact.js";
+import contactRoutes from "./routes/contact.js";
 
 dotenv.config();
 
@@ -19,7 +19,7 @@ app.use(express.json());
 //Routes
 app.use("/api/projects", projectRoutes);
 app.use("/api/experience", experienceRoutes);
-// app.use("/api/contacts", contactRoutes);
+app.use("/api/contacts", contactRoutes);
 
 //Connect to mongoDB
 mongoose
